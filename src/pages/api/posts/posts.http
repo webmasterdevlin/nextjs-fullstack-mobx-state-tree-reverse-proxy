@@ -1,0 +1,28 @@
+GET https://jsonplaceholder.typicode.com/posts/
+
+###
+GET http://localhost:3000/api/posts
+
+###
+DELETE http://localhost:3000/api/posts/60fc10e87b929e98490fe8cc
+
+###
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+  "userId": 4,
+  "title": "hi",
+  "body": "hello"
+}
+
+###
+PUT http://localhost:3000/api/posts/60fc10a59befcd98055d6c34
+Content-Type: application/json
+
+{
+  "userId": 4,
+  "title": "hi - updated",
+  "body": "hello - updated"
+}
+
