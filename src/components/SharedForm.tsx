@@ -12,21 +12,12 @@ const SharedForm = () => {
         <Form style={{ padding: "1rem" }}>
           <div>
             <SharedInput
-              id={"firstName"}
-              dataTestId={"firstName"}
-              label={"First Name"}
+              id={"userId"}
+              dataTestId={"userId"}
+              label={"User Id"}
             />
-            <SharedInput
-              id={"lastName"}
-              dataTestId={"lastName"}
-              label={"Last Name"}
-            />
-            <SharedInput id={"house"} dataTestId={"house"} label={"House"} />
-            <SharedInput
-              id={"knownAs"}
-              dataTestId={"knownAs"}
-              label={"Known As"}
-            />
+            <SharedInput id={"title"} dataTestId={"title"} label={"Title"} />
+            <SharedInput id={"body"} dataTestId={"body"} label={"Body"} />
           </div>
 
           <Button

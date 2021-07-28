@@ -27,8 +27,8 @@ const PostsPage = observer(() => {
     postStore.getPostsAction();
   }, []);
   return (
-    <Layout title={"Next Mobx - Anti Posts Page"}>
-      <TitleBar title={"Super Posts Page"} />
+    <Layout title={"Next Mobx State Tree - Posts Page"}>
+      <TitleBar title={"Posts Page"} />
       <FormSubmission postAction={postStore.postPostAction} />
       <UpdateUiLabel />
       <>
@@ -46,12 +46,26 @@ const PostsPage = observer(() => {
               justifyContent={"space-between"}
               data-testid={"card"}
             >
-              <div>
-                <Typography>
-                  <span>{`${p.title} ${p.body}`}</span>
+              <section style={{ width: "50vw" }}>
+                <Typography
+                  variant={"subtitle2"}
+                  style={{ overflowWrap: "break-word" }}
+                >
+                  {`title: ${p.title}`}
+                </Typography>
+                <Typography
+                  variant={"body2"}
+                  style={{ overflowWrap: "break-word" }}
+                >
+                  {`body: ${p.body}`}
+                </Typography>
+                <Typography
+                  variant={"overline"}
+                  style={{ overflowWrap: "break-word" }}
+                >
                   {counter === p.id.toString() && <span> - marked</span>}
                 </Typography>
-              </div>
+              </section>
               <div>
                 <Button
                   className={classes.button}

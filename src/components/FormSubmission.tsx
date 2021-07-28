@@ -11,16 +11,14 @@ const FormSubmission = ({ postAction }: Props) => {
   return (
     <Formik
       initialValues={{
-        firstName: "",
-        lastName: "",
-        house: "",
-        knownAs: "",
+        userId: "",
+        title: "",
+        body: "",
       }}
       validationSchema={yup.object({
-        firstName: yup.string().label("First Name").min(2).max(45),
-        lastName: yup.string().label("Last Name").min(2).max(45),
-        house: yup.string().label("House").max(45).required(),
-        knownAs: yup.string().label("Known as").max(45).required(),
+        userId: yup.number().label("User Id").required(),
+        title: yup.string().label("Title").min(2).max(45),
+        body: yup.string().label("Body").min(2).max(255),
       })}
       onSubmit={async (values, actions) => {
         await postAction(values);

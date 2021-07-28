@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout title="Home | Next.js + Mobx Example">
       <Typography variant={"h2"}>
-        Welcome to Fullstack Next.js with Mobx React Lite + Mongoose
+        Welcome to Fullstack Next.js with Mobx State Tree + Reverse Proxy
       </Typography>
     </Layout>
   );
