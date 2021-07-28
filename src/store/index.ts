@@ -16,19 +16,23 @@ let initialState = RootModel.create({
   },
 });
 
-// const data = localStorage.getItem("rootState");
-// if (data) {
-//   const json = JSON.parse(data);
-//   if (RootModel.is(json)) {
-//     initialState = RootModel.create(json as any);
-//   }
-// }
+if (typeof window !== "undefined") {
+  const data = localStorage.getItem("rootState");
+  if (data) {
+    const json = JSON.parse(data);
+    if (RootModel.is(json)) {
+      initialState = RootModel.create(json as any);
+    }
+  }
+}
 
 export const rootStore = initialState;
 
-// onSnapshot(rootStore, (snapshot) => {
-//   localStorage.setItem("rootState", JSON.stringify(snapshot));
-// });
+if (typeof window !== "undefined") {
+  onSnapshot(rootStore, (snapshot) => {
+    localStorage.setItem("rootState", JSON.stringify(snapshot));
+  });
+}
 
 export type RootInstance = Instance<typeof RootModel>;
 
