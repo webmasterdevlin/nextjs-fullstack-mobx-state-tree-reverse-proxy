@@ -2,4 +2,7 @@
 
 ## Reroutes to JSON Placeholder
 
+### environment variables storage
+.env.local
+
 ![screenshot](./screenshot.png)

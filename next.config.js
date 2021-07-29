@@ -1,5 +1,9 @@
 module.exports = {
   reactStrictMode: true,
-  MONGODB_URI:
-    "mongodb+srv://webmasterdevlin:Pass123!@cluster0.5upod.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  serverRuntimeConfig: {
+    // Will only be available on the server side
+  },
+  publicRuntimeConfig: {
+    // Will be available on both server and client
+  },
 };
