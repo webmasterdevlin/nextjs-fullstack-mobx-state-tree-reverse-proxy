@@ -1,7 +1,6 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@hapi/boom': ^9.1.3
   '@material-ui/core': ^4.12.1
   '@material-ui/icons': ^4.11.2
   '@material-ui/lab': 4.0.0-alpha.60
@@ -29,7 +28,6 @@ specifiers:
   yup: ^0.32.9
 
 dependencies:
-  '@hapi/boom': 9.1.3
   '@material-ui/core': 4.12.2_28c0df05a9559c3217649c6005b51123
   '@material-ui/icons': 4.11.2_46c39387f2dfee435486736a3e4022f5
   '@material-ui/lab': 4.0.0-alpha.60_46c39387f2dfee435486736a3e4022f5
